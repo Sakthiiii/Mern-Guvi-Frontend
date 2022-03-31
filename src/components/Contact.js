@@ -6,6 +6,8 @@ import Typography from "@material-ui/core/Typography";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
+
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -85,7 +87,7 @@ const Contact = () => {
       const res = await axios.get(`https://mern-auth-serverside.herokuapp.com/contact/${id}`, config);
       setCurrentContact(res.data);
     } catch (err) {
-      console.error("erroe", err);
+      console.error(err);
     }
   };
   useEffect(() => {
@@ -103,8 +105,7 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     setCurrentContact({
-      ...currentContact,[e.target.name] :e.target.value,
-    });
+      ...currentContact,[e.target.name] :e.target.value, });
   };
   const handleEdit = async (id) => {
     const config = {
@@ -113,7 +114,7 @@ const Contact = () => {
       },
     };
     try{
-        await axios.put(`https://mern-auth-serverside.herokuapp.com/contact/${id}`,currentContact,config);
+        await axios.put(`/contact/${id}`,currentContact,config);
         setCurrentContact({
           firstname: currentContact.firstname,
           lastname: currentContact.lastname,
@@ -126,15 +127,15 @@ const Contact = () => {
 
 
     }catch(err){
-      console.error("error",err);
+      console.error(err);
     }
 
   };
 
   const handleDelete =async (id) => {
-    await axios.delete(`https://mern-auth-serverside.herokuapp.com/contact/${id}`).then((res)=>{
+    await axios.delete(`/contact/${id}`).then((res)=>{
 
-    const del =contacts.filter((contact) => id  !==  contact.id);
+    const del =contacts.filter((contact) => id !== contact.id);
     setContacts(del);
     setOpen(false);
     window.location.reload();
