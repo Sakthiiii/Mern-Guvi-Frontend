@@ -7,7 +7,6 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -63,7 +62,10 @@ const Contact = () => {
       },
     };
     try {
-      const res = await axios.get("https://mern-auth-serverside.herokuapp.com/contact", config);
+      const res = await axios.get(
+        "https://mern-auth-serverside.herokuapp.com/contact",
+        config
+      );
       setContacts(res.data);
     } catch (err) {
       console.error("erroe", err);
@@ -84,7 +86,10 @@ const Contact = () => {
       },
     };
     try {
-      const res = await axios.get(`https://mern-auth-serverside.herokuapp.com/contact/${id}`, config);
+      const res = await axios.get(
+        `https://mern-auth-serverside.herokuapp.com/contact/${id}`,
+        config
+      );
       setCurrentContact(res.data);
     } catch (err) {
       console.error(err);
@@ -105,7 +110,9 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     setCurrentContact({
-      ...currentContact,[e.target.name] :e.target.value, });
+      ...currentContact,
+      [e.target.name]: e.target.value,
+    });
   };
   const handleEdit = async (id) => {
     const config = {
@@ -113,33 +120,35 @@ const Contact = () => {
         "Content-Type": "application/json",
       },
     };
-    try{
-        await axios.put(`https://mern-auth-serverside.herokuapp.com/contact/${id}`,currentContact,config);
-        setCurrentContact({
-          firstname: currentContact.firstname,
-          lastname: currentContact.lastname,
-          email: currentContact.email,
-          company: currentContact.company,
-          phone: currentContact.phone,
-        });
-        setOpen(false);
-        window.location.reload();
-
-
-    }catch(err){
-      console.error(err);
+    try {
+      await axios.put(
+        `https://mern-auth-serverside.herokuapp.com/contact/${id}`,
+        currentContact,
+        config
+      );
+      setCurrentContact({
+        firstname: currentContact.firstname,
+        lastname: currentContact.lastname,
+        email: currentContact.email,
+        company: currentContact.company,
+        phone: currentContact.phone,
+      });
+      setOpen(false);
+      window.location.reload();
+    } catch (err) {
+      console.error("error", err);
     }
-
   };
 
-  const handleDelete =async (id) => {
-    await axios.delete(`https://mern-auth-serverside.herokuapp.com/contact/${id}`).then((res)=>{
-
-    const del =contacts.filter((contact) => id !== contact.id);
-    setContacts(del);
-    setOpen(false);
-    window.location.reload();
-    })
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`https://mern-auth-serverside.herokuapp.com/contact/${id}`)
+      .then((res) => {
+        const del = contacts.filter((contact) => id !== contact.id);
+        setContacts(del);
+        setOpen(false);
+        window.location.reload();
+      });
   };
   return (
     <div>
@@ -199,7 +208,9 @@ const Contact = () => {
           aria-labelledby="form-dialog-title"
         >
           <DialogContent>
-            <DialogContentText component={"div"}  style={{ textAlign: "center" }}
+            <DialogContentText
+              component={"div"}
+              style={{ textAlign: "center" }}
             >
               <form className="contact-form">
                 <input
