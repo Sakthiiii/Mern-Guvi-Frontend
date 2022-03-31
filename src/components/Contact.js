@@ -114,7 +114,7 @@ const Contact = () => {
       },
     };
     try{
-        await axios.put(`/contact/${id}`,currentContact,config);
+        await axios.put(`https://mern-auth-serverside.herokuapp.com/contact/${id}`,currentContact,config);
         setCurrentContact({
           firstname: currentContact.firstname,
           lastname: currentContact.lastname,
