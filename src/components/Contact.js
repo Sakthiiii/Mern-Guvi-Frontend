@@ -133,7 +133,7 @@ const Contact = () => {
   };
 
   const handleDelete =async (id) => {
-    await axios.delete(`/contact/${id}`).then((res)=>{
+    await axios.delete(`https://mern-auth-serverside.herokuapp.com/contact/${id}`).then((res)=>{
 
     const del =contacts.filter((contact) => id !== contact.id);
     setContacts(del);
