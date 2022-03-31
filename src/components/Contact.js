@@ -126,6 +126,8 @@ const Contact = () => {
         currentContact,
         config
       );
+     
+     
       setCurrentContact({
         firstname: currentContact.firstname,
         lastname: currentContact.lastname,
