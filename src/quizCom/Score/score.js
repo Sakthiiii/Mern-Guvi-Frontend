@@ -10,11 +10,11 @@ const Score = (props) => {
         <h2>
             Your Score : {
                 props.score < props.total && props.score>= 5 ?(
-                    <span>{props.score}/{props.total} (Not Bad !)</span>
+                    <span>{props.score}/{props.total} (Good!)</span>
                 ): props.score <5 ?(
-                    <span>{props.score}/{props.total} (Very Poor !)</span>
+                    <span>{props.score}/{props.total} ( Poor !)</span>
                 ): (
-                    <span>{props.score} /{props.total} (Good !  ) </span>
+                    <span>{props.score} /{props.total} ( Very Good !  ) </span>
                 )
             }
         </h2>
