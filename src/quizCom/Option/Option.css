@@ -1,0 +1,53 @@
+.options{
+  list-style: none;
+    align-items: center;
+    padding-left: 150px;
+    margin: 0%;
+}
+.options li {
+    list-style: none;
+    padding: 10px;
+  
+    background-color: lightcoral;
+    margin: 10px 20px;
+    border: 2px solid #343a40;
+    width: 30%;
+    border-radius: 10px;
+}
+.options li:hover{
+    cursor: pointer;
+    background-color: lightseagreen;
+}
+.options .crt , .options .crt:hover{
+    background-color: chartreuse;
+    font-weight: bolder;
+    border: 3px solid chartreuse;
+}
+.options .Incrt ,.options .Incrt:hover{
+    background-color: #dc3545;
+    font-weight: bolder;
+    border: 3px solid #dc3545;
+}
+.options[disabled]{
+    pointer-events: none;
+    opacity: 0.9;
+}
+.p1{
+    color: darkgreen;
+    font-size: 25px;
+    padding:20px 170px  ;
+}
+.p2{
+    color: darkred;
+    font-size: 25px;
+    padding:20px 170px  ;
+}
+
+.p1::after{
+    content: '\2713';
+    text-shadow: 2px 2px 2px green;
+}
+.p2::before{
+    content: '\274c\00a0 - ';
+    text-shadow: 2px 2px 2px red;
+} 

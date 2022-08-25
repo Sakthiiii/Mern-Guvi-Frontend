@@ -1,0 +1,13 @@
+.score{
+    text-align: center;
+    background-color: #28a745;
+    margin: 8%;
+    padding: 10%;
+}
+.score h2{
+    color: lawngreen;
+
+}
+.score span {
+    color: darkred;
+}

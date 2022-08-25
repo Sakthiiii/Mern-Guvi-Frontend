@@ -1,0 +1,29 @@
+.Main-content h1{
+   color: blue;
+   text-align: center;
+}
+.Main-content{
+    text-align: center;
+ padding: 120px 10px;
+    font-size: 20px;
+}
+.Main-content button {
+    color: white;
+    background-color: green;
+padding: 5px;
+border-radius: 10px;
+font-size: large;
+transition: 0.3s;
+margin: 20px;
+
+}
+.Main-content button:hover{
+    background-color: lightcoral;
+    cursor: pointer;
+
+}
+
+.Main-content h2{
+    color: red;
+    text-align: center;
+}
