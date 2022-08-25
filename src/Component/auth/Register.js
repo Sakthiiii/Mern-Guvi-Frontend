@@ -36,7 +36,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
 	return (
 		<div className="register-form">
-			<h1 className="heading">Sign Up</h1>
+			<h1 className="heading" style={{color:'black'}}>Sign Up</h1>
 			<p className="lead">
 				<i className="fas fa-user"></i> Create Your Account
 			</p>

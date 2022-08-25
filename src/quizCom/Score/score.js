@@ -1,7 +1,7 @@
 import React from 'react'
 import './score.css';
-import {BrowserRouter as Router, Link,Route,Routes} from 'react-router-dom'
-import Dashboard from '../../Component/Dashboard';
+
+
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 const Score = (props) => {
@@ -19,7 +19,7 @@ const Score = (props) => {
             }
         </h2>
         <h3> Thank You !</h3>
-     <Link to='/dashboard'> back to test  </Link>  
+    
      
     </div>
   )

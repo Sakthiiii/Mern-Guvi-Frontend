@@ -29,7 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
 
 	return (
 		<div className="login-form">
-			<h1 className="heading">Sign In</h1>
+			<h1 className="heading" style={{color:'black'}}>Sign In</h1>
 			<p className="lead">
 				<i className="fas fa-user"></i> Sign Into Your Account
 			</p>
