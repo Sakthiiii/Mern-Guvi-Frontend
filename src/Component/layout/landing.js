@@ -12,17 +12,17 @@ const Landing = ({ isAuthenticated }) => {
 		<section className="landing">
 			<div className="dark-overlay">
 				<div className="landing-inner">
-					<h1 style={{color:'white'}}> Quiz MERN Project</h1>
+					<h1 style={{color:'white'}}>GUVI  MERN Project</h1>
 					<p>Register &amp; SignUp Page  with MERN</p>
 					<br />
-					<div className="buttons">
+					{/* <div className="buttons">
 						<Link to="/register" className="btn">
 							Sign Up
 						</Link>
 						<Link to="/login" className="btn">
 							Login
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</section>
@@ -38,3 +38,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(Landing);
+//

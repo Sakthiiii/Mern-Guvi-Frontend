@@ -1,16 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import QuizAPP from "../quizCom/QuizApp";
+import Contact from "../components/Contact";
 
 
 const Dashboard = ({ auth: { user } }) => {
 	return (
-		<div >
-			{/* <h1 style={{ marginTop: "4rem", textAlign: "center" }}>Welcome, {user && user.name}</h1> */}
-			<QuizAPP/>
+		<div style={{ marginTop: "3.5rem", textAlign: "center" }}>
+			<h1>Welcome, Team </h1>
+			<Contact/>
 		</div>
-		
 	);
 };
 Dashboard.propTypes = {

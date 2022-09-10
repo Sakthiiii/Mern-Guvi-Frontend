@@ -3,13 +3,13 @@ ul{
   display: flex;
   flex-wrap: wrap;
 }
-li{
+/* li{
   background: #333;
   width: 40%;
   padding: 10px;
   margin: 10px;
   color: #fff;
-}
+} */
 
 .contacts-container{
 width: 80%;

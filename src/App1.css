@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 
 i {
@@ -91,7 +92,7 @@ a {
 	z-index: 1;
 	width: 100%;
 	top: 0;
-	opacity: 0.9;
+	opacity: 0.8;
 	background: #6cafa4;
 }
 
@@ -113,7 +114,7 @@ a {
 /* Landing Page */
 .landing {
 	position: relative;
-	background: url("./img/landing.jpg") no-repeat center 80% / cover;
+	background: url("./img/guvi.jpg") no-repeat center 80% / cover;
 	height: 100vh;
 }
 
@@ -136,6 +137,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	margin-top: 45px;
 }
 
 .landing-inner h1 {
@@ -156,10 +158,11 @@ a {
 
 .register-form,
 .login-form {
-	width: 80%;
+	width: 100%;
 	text-align: center;
-	margin: 6rem auto;
+	margin: 3.5rem auto;
 	justify-content: center;
+	
 }
 
 .form input {
@@ -177,7 +180,7 @@ a {
 }
 
 .link a {
-	color: #6cafa4;
+	color: white;
 }
 
 /* Mobile Styles */
