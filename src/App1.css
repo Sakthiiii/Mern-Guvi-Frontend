@@ -114,7 +114,7 @@ a {
 /* Landing Page */
 .landing {
 	position: relative;
-	background: url("./img/guvi.jpg") no-repeat center 80% / cover;
+	background: url("./img/landing.jpg") no-repeat center 80% / cover;
 	height: 100vh;
 }
 
