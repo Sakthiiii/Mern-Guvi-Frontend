@@ -11,13 +11,14 @@ import '../../src/App.css';
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
-    lastname: "",
+    age: "",
+    dob:"",
     email: "",
     company: "",
     phone: "",
   });
 
-  const { firstname, lastname, email, company, phone } = formData;
+  const { firstname, age,dob, email, company, phone } = formData;
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,7 +28,8 @@ const Contact = () => {
     e.preventDefault();
     const newContact = {
       firstname: firstname,
-      lastname: lastname,
+      age: age,
+      dob:dob,
       email: email,
       company: company,
       phone: phone,
@@ -43,7 +45,8 @@ const Contact = () => {
 
       setFormData({
         firstname: "",
-        lastname: "",
+        age: "",
+        dob:"",
         email: "",
         company: "",
         phone: "",
@@ -135,7 +138,8 @@ const Contact = () => {
      
       setCurrentContact({
         firstname: currentContact.firstname,
-        lastname: currentContact.lastname,
+        age: currentContact.age,
+        dob: currentContact.dob,
         email: currentContact.email,
         company: currentContact.company,
         phone: currentContact.phone,
@@ -170,13 +174,20 @@ const Contact = () => {
         ></input>
         <br />
         <input
-          type="text"
-          name="lastname"
-          value={lastname}
-          placeholder="Enter your lastname..."
+          type="number"
+          name="age"
+          value={age}
+          placeholder="Enter your age..."
           onChange={(e) => onChange(e)}
           required
-        ></input>
+        ></input><input
+        type="date"
+        name="dob"
+        value={dob}
+        placeholder="Enter your date of birth..."
+        onChange={(e) => onChange(e)}
+        required
+      ></input>
         <br />
         <input
           type="email"
@@ -230,10 +241,18 @@ const Contact = () => {
                 ></input>
                 <br />
                 <input
-                  type="text"
-                  name="lastname"
-                  value={currentContact.lastname}
-                  placeholder="Enter your lastname..."
+                  type="number"
+                  name="age"
+                  value={currentContact.age}
+                  placeholder="Enter your age..."
+                  onChange={handleInputChange}
+                  required
+                ></input>
+                 <input
+                  type="date"
+                  name="dob"
+                  value={currentContact.dob}
+                  placeholder="Enter your date of birth..."
                   onChange={handleInputChange}
                   required
                 ></input>
@@ -286,8 +305,12 @@ const Contact = () => {
               <li key={contact._id} onClick={() => handleClickClose()}>
                 <div className="left" onClick={() => setId(contact._id)}>
                   <p>
-                    {contact.firstname} &nbsp;{contact.lastname}
+                    {contact.firstname} 
                   </p>
+                  {/* <p>&nbsp;{contact.lastname}</p> */}
+                  <p>Age : {contact.age}</p>
+                  <p> D-O-B :-- {contact.dob}</p>
+
                   <p>{contact.email}</p>
                   <p> Work at {contact.company}</p>
                   <p>{contact.phone}</p>
