@@ -33,6 +33,7 @@ border-radius: 10px;
 display: flex;
 cursor: pointer;
 
+
 }
 .contact-list .left{
   width: 90%;
@@ -46,10 +47,13 @@ cursor: pointer;
 }
 .contact-form input{
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   width: 50%;
   outline: none;
   font-size: 16px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color: gray;
 }
 
 .contact-form button, .btn{
