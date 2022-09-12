@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 const Dashboard = ({ auth: { user } }) => {
 	return (
 		<div style={{ marginTop: "3.5rem", textAlign: "center" }}>
-			<h1>Welcome Team  </h1>
+			<h1>Welcome Team  {user && user} </h1>
 			<Contact/>
 		</div>
 	);

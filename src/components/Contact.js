@@ -303,17 +303,17 @@ const Contact = () => {
           {contacts.length > 0 ? (
             contacts.map((contact) => (
               <li key={contact._id} onClick={() => handleClickClose()}>
-                <div className="left" onClick={() => setId(contact._id)}>
+                <div className="center" onClick={() => setId(contact._id)}>
                   <p>
                     {contact.firstname} 
                   </p>
                   {/* <p>&nbsp;{contact.lastname}</p> */}
                   <p>Age : {contact.age}</p>
-                  <p> D-O-B :-- {contact.dob}</p>
+                  <p> D-O-B :- {contact.dob}</p>
 
-                  <p>{contact.email}</p>
+                  <p> {contact.email}</p>
                   <p> Work at {contact.company}</p>
-                  <p>{contact.phone}</p>
+                  <p> {contact.phone}</p>
                 </div>
               </li>
             ))
