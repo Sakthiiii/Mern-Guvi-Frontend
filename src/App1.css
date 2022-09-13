@@ -80,6 +80,7 @@ a {
 .alert-success {
 	background: var(--success-color);
 	color: #fff;
+
 }
 
 /* Navbar */
@@ -119,7 +120,7 @@ a {
 }
 
 .dark-overlay {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(7, 5, 5, 0.6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -158,6 +159,7 @@ a {
 
 .register-form,
 .login-form {
+	
 	width: 100%;
 	text-align: center;
 	margin: 3.5rem auto;
@@ -176,7 +178,9 @@ a {
 }
 
 .heading {
-	font-size: 40px;
+	font-size: 50px;
+
+	margin-top: 20px;
 }
 
 .link a {
