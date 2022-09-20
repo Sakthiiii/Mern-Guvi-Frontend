@@ -54,7 +54,7 @@ const Contact = () => {
       window.location.reload();
    
     } catch (err) {
-      console.error("error", err.data);
+      console.error("error", err.responce.data);
     }
   };
 
