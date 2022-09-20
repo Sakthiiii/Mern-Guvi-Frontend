@@ -52,8 +52,9 @@ const Contact = () => {
         phone: "",
       });
       window.location.reload();
+      console.log(setFormData)
     } catch (err) {
-      console.error("error", err.responce.data);
+      console.error("error");
     }
   };
 
