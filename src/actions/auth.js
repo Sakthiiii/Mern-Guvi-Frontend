@@ -18,7 +18,7 @@ export const loadUser = () => async (dispatch) => {
 	}
 
 	try {
-		const res = await axios.get("https://mern-auth-back-123.herokuapp.com/users/auth");
+		const res = await axios.get("https://mern-auth-back-123.herokuapp.com/users/auth/");
 
 		dispatch({
 			type: USER_LOADED,
@@ -76,7 +76,7 @@ export const login = (email, password) => async (dispatch) => {
 	const body = JSON.stringify({ email, password });
 
 	try {
-		const res = await axios.post("https://mern-auth-back-123.herokuapp.com/users/auth",body,config);
+		const res = await axios.post("https://mern-auth-back-123.herokuapp.com/users/auth/",body,config);
 
 		dispatch({
 			type: LOGIN_SUCCESS,

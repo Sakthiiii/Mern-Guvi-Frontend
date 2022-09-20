@@ -67,7 +67,7 @@ const Contact = () => {
     };
     try {
       const res = await axios.get(
-        "https://mern-auth-back-123.herokuapp.com/contact",
+        "https://mern-auth-serverside.herokuapp.com/contact",
         config
       );
       setContacts(res.data);
@@ -94,7 +94,7 @@ const Contact = () => {
     };
     try {
       const res = await axios.get(
-        `https://mern-auth-back-123.herokuapp.com/contact/${id}`,
+        `https://mern-auth-serverside.herokuapp.com/contact/${id}`,
         config
       );
       setCurrentContact(res.data);
@@ -130,7 +130,7 @@ const Contact = () => {
     };
     try {
       await axios.put(
-        `https://mern-auth-back-123.herokuapp.com/contact/${id}`,
+        `https://mern-auth-serverside.herokuapp.com/contact/${id}`,
         currentContact,
         config
       );
@@ -153,7 +153,7 @@ const Contact = () => {
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`https://mern-auth-back-123.herokuapp.com/contact/${id}`)
+      .delete(`https://mern-auth-serverside.herokuapp.com/contact/${id}`)
       .then((res) => {
         const del = contacts.filter((contact) => id !== contact.id);
         setContacts(del);
