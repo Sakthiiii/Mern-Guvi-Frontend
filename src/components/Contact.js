@@ -54,7 +54,7 @@ const Contact = () => {
       window.location.reload();
    
     } catch (err) {
-      console.error("error", err.responce.data);
+      console.error("error", err.res.data);
     }
   };
 
@@ -63,7 +63,7 @@ const Contact = () => {
   const getAllContacts = async () => {
     const config = {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json", 
       },
     };
     try {
