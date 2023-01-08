@@ -12,8 +12,9 @@ const Landing = ({ isAuthenticated }) => {
 		<section className="landing">
 			<div className="dark-overlay">
 				<div className="landing-inner">
-					<h1 style={{color:'white'}}>GUVI  MERN Project</h1>
-					<p>Register &amp; SignUp Page  with MERN</p>
+					<h1 style={{color:'white', textAlign:'right'}}>Alpharive Tech  </h1>
+					<h2>MERN Project</h2>
+					<h3>Register &amp; SignUp Page  with MERN</h3>
 					<br />
 					{/* <div className="buttons">
 						<Link to="/register" className="btn">

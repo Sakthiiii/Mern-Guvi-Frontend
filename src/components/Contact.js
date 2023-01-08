@@ -12,13 +12,13 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
     age: "",
-    dob:"",
+   
     email: "",
     company: "",
     phone: "",
   });
 
-  const { firstname, age,dob, email, company, phone } = formData;
+  const { firstname, age, email, company, phone } = formData;
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -29,7 +29,7 @@ const Contact = () => {
     const newContact = {
       firstname: firstname,
       age: age,
-      dob:dob,
+    
       email: email,
       company: company,
       phone: phone,
@@ -46,7 +46,7 @@ const Contact = () => {
       setFormData({
         firstname: "",
         age: "",
-        dob:"",
+       
         email: "",
         company: "",
         phone: "",
@@ -68,7 +68,7 @@ const Contact = () => {
     };
     try {
       const res = await axios.get(
-        "https://mern-auth-back-123.herokuapp.com/contact/",
+        "https://mern-backend-n742.onrender.com/contact/",
         config
       );
       setContacts(res.data);
@@ -95,7 +95,7 @@ const Contact = () => {
     };
     try {
       const res = await axios.get(
-        `https://mern-auth-back-123.herokuapp.com/contact/${id}`,
+        `https://mern-backend-n742.onrender.com/contact/${id}`,
         config
       );
       setCurrentContact(res.data);
@@ -131,7 +131,7 @@ const Contact = () => {
     };
     try {
       await axios.put(
-        `https://mern-auth-back-123.herokuapp.com/contact/${id}`,
+        `https://mern-backend-n742.onrender.com/contact/${id}`,
         currentContact,
         config
       );
@@ -140,7 +140,7 @@ const Contact = () => {
       setCurrentContact({
         firstname: currentContact.firstname,
         age: currentContact.age,
-        dob: currentContact.dob,
+       
         email: currentContact.email,
         company: currentContact.company,
         phone: currentContact.phone,
@@ -154,7 +154,7 @@ const Contact = () => {
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`https://mern-auth-back-123.herokuapp.com/contact/${id}`)
+      .delete(`https://mern-backend-n742.onrender.com/contact/${id}`)
       .then((res) => {
         const del = contacts.filter((contact) => id !== contact.id);
         setContacts(del);
@@ -181,14 +181,8 @@ const Contact = () => {
           placeholder="Enter your age..."
           onChange={(e) => onChange(e)}
           required
-        ></input><input
-        type="date"
-        name="dob"
-        value={dob}
-        placeholder="Enter your date of birth..."
-        onChange={(e) => onChange(e)}
-        required
-      ></input>
+        ></input>
+       
         <br />
         <input
           type="email"
@@ -249,14 +243,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                 ></input>
-                 <input
-                  type="date"
-                  name="dob"
-                  value={currentContact.dob}
-                  placeholder="Enter your date of birth..."
-                  onChange={handleInputChange}
-                  required
-                ></input>
+               
                 <br />
                 <input
                   type="email"

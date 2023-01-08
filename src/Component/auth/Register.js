@@ -10,11 +10,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
+		phone:"",
 		password: "",
 		password2: "",
 	});
 
-	const { name, email, password, password2 } = formData;
+	const { name, email, password, password2 ,phone} = formData;
 
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -58,6 +59,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 						placeholder="Email Address"
 						name="email"
 						value={email}
+						onChange={(e) => onChange(e)}
+					/>
+				</div>
+				<div className="form-group">
+					<input
+						type="text"
+						placeholder="Mobile Number"
+						name="phone"
+						value={phone}
 						onChange={(e) => onChange(e)}
 					/>
 				</div>

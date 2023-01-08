@@ -14,7 +14,7 @@ const Fetchdata = () => {
         }
         
         try{
-            axios.get("https://mern-auth-back-123.herokuapp.com/contact",config)
+            axios.get("https://mern-backend-n742.onrender.com/contact",config)
             .then((res) => {
                 let profiles =res.data;
                 setProfiles(profiles)

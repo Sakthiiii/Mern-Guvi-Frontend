@@ -115,12 +115,13 @@ a {
 /* Landing Page */
 .landing {
 	position: relative;
-	background: url("./img/guvi.jpg") no-repeat center 80% / cover;
+	background: url("./img/Forex.png") no-repeat center 80% / cover;
 	height: 100vh;
+	
 }
 
 .dark-overlay {
-	background-color: rgba(7, 5, 5, 0.6);
+	 background-color: rgba(7, 5, 5, 0.6); 
 	position: absolute;
 	top: 0;
 	left: 0;
